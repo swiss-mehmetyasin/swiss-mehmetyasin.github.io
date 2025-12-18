@@ -2,8 +2,12 @@
 
 :root{
   --bg:#f4f1ee;
-  --glass:#4e5538;
+  --glass:#555c40;
   --ink:rgba(10,10,10,.85);
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 html,body{height:100%}
@@ -13,6 +17,7 @@ body{
   -webkit-overflow-scrolling:touch;
 }
 
+/* Wrap stays centered for gallery content */
 .wrap{
   max-width:980px;
   margin:0 auto;
@@ -35,7 +40,7 @@ body{
   position:fixed;
   top:14px;
   left:50%;
-  transform:translateX(-50%);
+  transform:translateX(-50%) translateY(-6px);
   display:flex;
   gap:10px;
   opacity:0;
@@ -46,6 +51,7 @@ body{
 .float-nav.show{
   opacity:1;
   pointer-events:auto;
+  transform:translateX(-50%) translateY(0);
 }
 .bubble{
   text-decoration:none;
@@ -54,27 +60,33 @@ body{
   border-radius:999px;
   background:
     linear-gradient(180deg,
-      rgba(78,85,56,.55),
-      rgba(78,85,56,.35));
+      rgba(85,92,64,.55),
+      rgba(85,92,64,.35));
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border:1px solid rgba(255,255,255,.25);
   box-shadow:0 8px 24px rgba(0,0,0,.18);
   font-size:14px;
+  white-space:nowrap;
 }
 .bubble:hover{
   box-shadow:0 10px 30px rgba(0,0,0,.25);
 }
 
-/* Contact footer (dark) */
+/* Contact footer (full width + overlaps last image) */
 .contact{
-  background:#121212;
-  margin-top:24px;
+  width:100%;
+  background:rgba(18,18,18,.92);
+  margin-top:-140px;
+  position:relative;
+  z-index:5;
+  border-top-left-radius:24px;
+  border-top-right-radius:24px;
 }
 .contact-inner{
   max-width:980px;
   margin:0 auto;
-  padding:24px 14px;
+  padding:24px 14px 32px;
   display:flex;
   gap:12px;
   flex-wrap:wrap;
