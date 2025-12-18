@@ -1,35 +1,62 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Visueller Weg</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div class="gallery">
-  <img src="images/1.png">
-  <img src="images/2.png">
-  <img src="images/3.png">
-  <img src="images/4.png">
-  <img src="images/5.png">
-  <img src="images/6.png">
-  <img src="images/7.png">
-  <img src="images/8.png">
-  <img src="images/9.png">
-  <img src="images/10.png">
-  <img src="images/11.png">
-  <img src="images/12.png">
-  <img src="images/13.png">
-  <img src="images/14.png">
-  <img src="images/15.png">
-  <img src="images/16.png">
-  <img src="images/17.png">
-  <img src="images/18.png">
-  <img src="images/19.png">
-  <img src="images/20.png">
-</div>
+<!-- Floating glass bubbles (hidden at top, appear on scroll) -->
+<nav class="float-nav" id="nav">
+  <a class="bubble" href="#img2">Über mich</a>
+  <a class="bubble" href="#img3">Zeitlinie</a>
+  <a class="bubble" href="#img16">Fazit</a>
+  <a class="bubble" href="#kontakt">Kontakt</a>
+</nav>
+
+<main class="wrap">
+  <section class="gallery">
+    <img src="images/1.png" alt="">
+    <img id="img2" src="images/2.png" alt="">
+    <img id="img3" src="images/3.png" alt="">
+    <img src="images/4.png" alt="">
+    <img src="images/5.png" alt="">
+    <img src="images/6.png" alt="">
+    <img src="images/7.png" alt="">
+    <img src="images/8.png" alt="">
+    <img src="images/9.png" alt="">
+    <img src="images/10.png" alt="">
+    <img src="images/11.png" alt="">
+    <img src="images/12.png" alt="">
+    <img src="images/13.png" alt="">
+    <img src="images/14.png" alt="">
+    <img src="images/15.png" alt="">
+    <img id="img16" src="images/16.png" alt="">
+    <img src="images/17.png" alt="">
+    <img src="images/18.png" alt="">
+    <img src="images/19.png" alt="">
+    <img src="images/20.png" alt="">
+  </section>
+
+  <section id="kontakt" class="contact">
+    <div class="contact-inner">
+      <a href="mailto:YOUR_EMAIL@example.com">Email</a>
+      <a href="https://wa.me/YOURNUMBER">WhatsApp</a>
+      <a href="https://instagram.com/YOURUSERNAME">Instagram</a>
+    </div>
+  </section>
+</main>
+
+<script>
+  const nav = document.getElementById('nav');
+  const showAt = 40;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > showAt) nav.classList.add('show');
+    else nav.classList.remove('show');
+  });
+</script>
 
 </body>
 </html>
-
