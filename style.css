@@ -1,1 +1,50 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html, body{
+  height:100%;
+}
+
+body{
+  background:#f4f1ee;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+}
+
+.gallery{
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
+}
+
+.gallery img{
+  width:100%;
+  height:auto;
+  display:block;
+  margin:0;
+}
+
+/* Scrollbar (Chrome/Edge) */
+::-webkit-scrollbar{
+  width:10px;
+}
+::-webkit-scrollbar-track{
+  background:#f4f1ee;
+}
+::-webkit-scrollbar-thumb{
+  background:rgba(0,0,0,0.25);
+  border-radius:999px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background:rgba(0,0,0,0.35);
+}
+
+/* Scrollbar (Firefox) */
+*{
+  scrollbar-width:thin;
+  scrollbar-color:rgba(0,0,0,0.25) #f4f1ee;
+}
 
