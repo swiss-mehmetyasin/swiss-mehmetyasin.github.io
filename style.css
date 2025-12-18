@@ -78,8 +78,8 @@ body{
   height:180px;
 }
 
-/* Contact footer (full width + overlaps last image) */
-.contact{
+/* Modern Footer */
+.footer{
   width:100%;
   background:rgba(18,18,18,.92);
   margin-top:-180px;
@@ -87,21 +87,209 @@ body{
   z-index:5;
   border-top-left-radius:24px;
   border-top-right-radius:24px;
+  min-height:500px;
 }
-.contact-inner{
-  max-width:980px;
+
+.footer-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  min-height:500px;
+  max-width:1400px;
   margin:0 auto;
-  padding:24px 14px 32px;
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+  padding:40px 30px;
 }
-.contact a{
-  color:#fff;
+
+.footer-section{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+/* Swiss Flag Section */
+.swiss-flag-container{
+  position:relative;
+  width:160px;
+  height:160px;
+}
+
+.swiss-flag{
+  width:100%;
+  height:100%;
+  background:#ff0000;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.4),
+    0 10px 20px rgba(0,0,0,.3),
+    inset 0 2px 4px rgba(255,255,255,.3),
+    inset 0 -2px 4px rgba(0,0,0,.2);
+}
+
+.swiss-cross{
+  position:relative;
+  width:48%;
+  height:48%;
+}
+
+.cross-v,.cross-h{
+  position:absolute;
+  background:#fff;
+  border-radius:3px;
+}
+
+.cross-v{
+  width:26%;
+  height:100%;
+  left:37%;
+  top:0;
+}
+
+.cross-h{
+  width:100%;
+  height:26%;
+  top:37%;
+  left:0;
+}
+
+/* Glass/Epoxy overlay */
+.flag-gloss{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border-radius:12px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.4) 0%,
+      rgba(255,255,255,.1) 40%,
+      rgba(0,0,0,.05) 60%,
+      rgba(0,0,0,.1) 100%
+    );
+  pointer-events:none;
+}
+
+/* Contact Buttons Grid */
+.footer-contact{
+  flex-direction:column;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  max-width:280px;
+}
+
+.contact-btn{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:24px 20px;
+  border-radius:20px;
   text-decoration:none;
-  border:1px solid rgba(255,255,255,.25);
-  padding:10px 14px;
-  border-radius:999px;
+  color:#fff;
+  background:
+    linear-gradient(180deg,
+      rgba(255,255,255,.12),
+      rgba(255,255,255,.04));
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:
+    0 8px 32px rgba(0,0,0,.2),
+    inset 0 1px 0 rgba(255,255,255,.15);
+  transition:all .25s ease;
+}
+
+.contact-btn:hover{
+  transform:translateY(-4px) scale(1.02);
+  box-shadow:
+    0 16px 48px rgba(0,0,0,.3),
+    inset 0 1px 0 rgba(255,255,255,.2);
+  background:
+    linear-gradient(180deg,
+      rgba(255,255,255,.18),
+      rgba(255,255,255,.08));
+}
+
+.contact-btn svg{
+  width:28px;
+  height:28px;
+  opacity:.9;
+}
+
+.contact-btn span{
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:.02em;
+  opacity:.85;
+}
+
+/* Footer Text Section */
+.footer-text{
+  text-align:center;
+  padding:40px;
+}
+
+.footer-text p{
+  color:rgba(255,255,255,.75);
+  font-size:18px;
+  line-height:1.6;
+  font-style:italic;
+  max-width:280px;
+}
+
+/* Responsive Footer */
+@media(max-width:900px){
+  .footer-inner{
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto auto;
+    min-height:auto;
+    padding:50px 20px;
+    gap:40px;
+  }
+  
+  .footer-section{
+    padding:10px;
+  }
+  
+  .swiss-flag-container{
+    width:120px;
+    height:120px;
+  }
+  
+  .footer-text p{
+    max-width:100%;
+    font-size:16px;
+  }
+}
+
+@media(max-width:480px){
+  .contact-grid{
+    gap:12px;
+  }
+  
+  .contact-btn{
+    padding:18px 16px;
+    border-radius:16px;
+  }
+  
+  .contact-btn svg{
+    width:24px;
+    height:24px;
+  }
+  
+  .contact-btn span{
+    font-size:12px;
+  }
 }
 
 /* Scrollbar */
