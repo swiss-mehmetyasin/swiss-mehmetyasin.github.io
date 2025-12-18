@@ -73,11 +73,16 @@ body{
   box-shadow:0 10px 30px rgba(0,0,0,.25);
 }
 
+/* Spacer to allow footer overlay on last image */
+.contact-spacer{
+  height:180px;
+}
+
 /* Contact footer (full width + overlaps last image) */
 .contact{
   width:100%;
   background:rgba(18,18,18,.92);
-  margin-top:-140px;
+  margin-top:-180px;
   position:relative;
   z-index:5;
   border-top-left-radius:24px;
