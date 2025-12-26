@@ -221,36 +221,40 @@ body{
 }
 
 .contact-btn svg{
-  width:32px;
-  height:32px;
+  width:28px;
+  height:28px;
+  opacity:.9;
 }
 
 .contact-btn span{
   font-size:13px;
   font-weight:500;
   letter-spacing:.02em;
+  opacity:.85;
 }
 
 /* Footer Text Section */
 .footer-text{
   text-align:center;
+  padding:40px;
 }
 
-.footer-tagline{
-  color:rgba(255,255,255,.7);
-  font-size:16px;
+.footer-text p{
+  color:rgba(255,255,255,.75);
+  font-size:18px;
   line-height:1.6;
-  max-width:260px;
   font-style:italic;
+  max-width:280px;
 }
 
 /* Responsive Footer */
-@media (max-width:900px){
+@media(max-width:900px){
   .footer-inner{
     grid-template-columns:1fr;
-    gap:40px;
+    grid-template-rows:auto auto auto;
     min-height:auto;
-    padding:60px 20px;
+    padding:50px 20px;
+    gap:40px;
   }
   
   .footer-section{
@@ -258,38 +262,33 @@ body{
   }
   
   .swiss-flag-container{
-    width:140px;
-    height:140px;
-  }
-  
-  .footer-tagline{
-    max-width:100%;
-  }
-}
-
-@media (max-width:480px){
-  .contact-grid{
-    gap:12px;
-    max-width:260px;
-  }
-  
-  .contact-btn{
-    padding:20px 16px;
-    border-radius:16px;
-  }
-  
-  .contact-btn svg{
-    width:28px;
-    height:28px;
-  }
-  
-  .swiss-flag-container{
     width:120px;
     height:120px;
   }
   
-  .footer-tagline{
-    font-size:14px;
+  .footer-text p{
+    max-width:100%;
+    font-size:16px;
+  }
+}
+
+@media(max-width:480px){
+  .contact-grid{
+    gap:12px;
+  }
+  
+  .contact-btn{
+    padding:18px 16px;
+    border-radius:16px;
+  }
+  
+  .contact-btn svg{
+    width:24px;
+    height:24px;
+  }
+  
+  .contact-btn span{
+    font-size:12px;
   }
 }
 
