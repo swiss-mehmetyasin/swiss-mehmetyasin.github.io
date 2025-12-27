@@ -19,20 +19,27 @@ body{
 
 /* Wrap stays centered for gallery content */
 .wrap{
-  max-width:980px;
-  margin:0 auto;
-  padding:0 14px;
+  width:100%;
+  max-width:100%;
+  margin:0;
+  padding:0;
 }
 
-/* Gallery: single continuous scroll */
+/* Gallery: single continuous scroll, no gaps */
 .gallery{
+  width:100%;
   max-width:900px;
   margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 .gallery img{
   width:100%;
   height:auto;
   display:block;
+  margin:0;
+  padding:0;
 }
 
 /* Floating glass bubbles */
@@ -73,27 +80,19 @@ body{
   box-shadow:0 10px 30px rgba(0,0,0,.25);
 }
 
-/* Spacer to allow footer overlay on last image */
-.contact-spacer{
-  height:180px;
-}
-
-/* Modern Footer */
+/* Modern Footer - Full Width */
 .footer{
   width:100%;
-  background:rgba(18,18,18,.92);
-  margin-top:-180px;
+  background:#555c40;
+  height:500px;
   position:relative;
   z-index:5;
-  border-top-left-radius:24px;
-  border-top-right-radius:24px;
-  min-height:500px;
 }
 
 .footer-inner{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
-  min-height:500px;
+  height:100%;
   max-width:1400px;
   margin:0 auto;
   padding:40px 30px;
@@ -240,7 +239,7 @@ body{
 }
 
 .footer-text p{
-  color:rgba(255,255,255,.75);
+  color:rgba(255,255,255,.85);
   font-size:18px;
   line-height:1.6;
   font-style:italic;
@@ -249,10 +248,14 @@ body{
 
 /* Responsive Footer */
 @media(max-width:900px){
+  .footer{
+    height:auto;
+    min-height:500px;
+  }
+  
   .footer-inner{
     grid-template-columns:1fr;
     grid-template-rows:auto auto auto;
-    min-height:auto;
     padding:50px 20px;
     gap:40px;
   }
