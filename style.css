@@ -2,7 +2,7 @@
 
 :root{
   --bg:#f4f1ee;
-  --glass:#555c40;
+  --glass:#3b3b3b;
   --ink:rgba(10,10,10,.85);
 }
 
@@ -83,7 +83,7 @@ body{
 /* Modern Footer - Full Width */
 .footer{
   width:100%;
-  background:#555c40;
+  background:#3b3b3b;
   height:500px;
   position:relative;
   z-index:5;
